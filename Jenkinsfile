@@ -11,10 +11,14 @@ pipeline {
         }
       }
       stage ('Test') {
+        steps{
          echo "This is a Test Stage"
+        }
       }
       stage ('Final') {
-         echo "This is final stage"
+        steps{
+         echo "This is a Final Stage"
+        }
       }
     }
 }
