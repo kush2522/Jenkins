@@ -4,7 +4,9 @@ pipeline {
     stages {
       stage ('Build') {
         when {
-          BRANCH_NAME == 'Test'
+          expression {
+            BRANCH_NAME == 'Test'
+          }
         }
         steps{
            echo "This is a build stage"      
